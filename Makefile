@@ -20,6 +20,9 @@ inst.chisel: $(ALL_OPCODES) parse_opcodes
 inst.c: $(ALL_OPCODES) parse_opcodes
 	cat opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-rvv opcodes-rvv-pseudo opcodes-pseudo | ./parse_opcodes -c > $@
 
+inst.js: $(ALL_OPCODES) parse_opcodes
+	cat opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-rvv opcodes-rvv-pseudo opcodes-pseudo | ./parse_opcodes -javascript > $@
+
 inst.go: opcodes opcodes-pseudo parse_opcodes
 	cat opcodes opcodes-pseudo | ./parse_opcodes -go > $@
 

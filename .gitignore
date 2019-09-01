@@ -1,5 +1,4 @@
 .*.swp
-inst.chisel
-inst.go
+inst.*
 instr-table.tex
 priv-instr-table.tex
