@@ -997,8 +997,8 @@ def make_js():
   for name in namelist:
     print('    {')
     print('        operation: "%s",' % name)
-    print('        match: 0x%s,' % match[name])
-    print('        mask: 0x%s,' % mask[name])
+    print('        match: %s,' % hex(match[name]))
+    print('        mask: %s,' % hex(mask[name]))
     print('        arguments: %s,' % arguments[name])
     print('    },')
   print('];')
